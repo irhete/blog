@@ -2,10 +2,10 @@ require 'rubygems'
 require 'action_mailer'
 
 class UserMailer < ActionMailer::Base
-  default :from => "from@example.com"
+  default :from => "rubykursus1@gmail.com"
 
   def comment_received_email(post)
     @post = post
-    mail(:to => "irene.teinemaa@gmail.com", :subject => "New comment")
+    mail(:to => post.email, :subject => "New comment")
   end
 end
