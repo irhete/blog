@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<div id="postMain">
+
+<h2 >
+  <%= @post.title %> 
+</h2> 
+
+<p id="author">
+  <%= 'By: ' + @post.name %>
+</p>
+<%= link_to '[Edit]', edit_post_path(@post) %>
+
+<p id="content">
+  <%= @post.content %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= join_tags(@post) %>
+</p>
+</div>
+
+
+<div id="commentMain">
+<h2>Comments</h2>  <%= link_to '[Delete all]', deletecomments_post_path(@post), :confirm => 'Are you sure?', :method => :delete %>
+<%= render @post.comments %>
+</div>
+
+
+<% if !@post.closed %>
+	<div id="addCommentMain">
+	<h2>Add a comment:</h2>
+	<%= render "comments/form" %>
+	</div>
+<% end %>
+
+
+<%= link_to '<<', posts_path, :class => 'navigationLink'%>

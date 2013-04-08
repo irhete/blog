@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Hi, <%= @post.name %></h1>
+    <p>
+      You have received a comment for post <%= @post.title %>.<br/>
+    </p>
+    <p>
+      To view the post with its comments follow this url: <%= @url %>.
+    </p>
+    <p>Have a great day!</p>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<p class="comment">
+  <b><%= comment.commenter + ':' %></b>
+  <%= comment.body %>
+  <%= link_to image_tag('DeleteRed.png', :class => 'deleteImage'), [comment.post, comment],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>

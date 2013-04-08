@@ -1,0 +1,20 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment {
+	padding-left: 10px;
+}
+
+.deleteCommentImage {
+	width: 15px;
+	height: 15px;
+}
+
+.commentForm {
+	height: 75px;
+}
+
+#commentMain, #addCommentMain {
+	margin-bottom: 40px;
+}
